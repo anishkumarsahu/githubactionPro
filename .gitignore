@@ -1,2 +1,4 @@
 .idea
 githubactionPro/__pychche__/*
+.coverage
+htmlcov
