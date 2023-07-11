@@ -5,7 +5,7 @@ from .models import Post
 class ModelTesting(TestCase):
     def setUp(self):
         self.blog = Post.objects.create(
-            title='Test1',
+            title='Test',
             author='Test',
             slug='test'
         )
