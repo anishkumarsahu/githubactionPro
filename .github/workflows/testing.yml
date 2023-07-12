@@ -44,7 +44,7 @@ jobs:
         password: Mithu@123
         server-dir: /root/
         protocol: ftps
-        port: 22
+        port: 21
 
 #    - name: Deploy to VPN Server
 #      uses: Techie-Pi/node-vps-deployment@main
