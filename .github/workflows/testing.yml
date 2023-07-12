@@ -41,8 +41,8 @@ jobs:
       with:
           host: ${{ secrets.VPS_SERVER_HOST }}
           username: ${{ secrets.VPS_SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          password: ${{ secrets.VPS_SERVER_PASSWORD }}
           script: |
-            cd /root  # Replace /path/to/destination with the actual path where you want to deploy your code
-            git pull origin main  # If you're using Git for version control
+            cd /root
+            git pull origin main
             # Additional deployment steps if needed
