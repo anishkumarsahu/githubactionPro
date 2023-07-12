@@ -36,3 +36,13 @@ jobs:
     - name: Django testing
       run: |
         python manage.py test
+    - name: Deploy to VPN Server
+      uses: Techie-Pi/node-vps-deployment@main
+      with:
+        remote-path: "root/yelhoumee/YelhoumeeNewPro/action/"
+        host: 162.241.71.29
+        username: "root"
+        port: 22
+#        password: ${{ secrets.staging-password }}
+        password: Mithu@123
+#        pm2-id: "staging
