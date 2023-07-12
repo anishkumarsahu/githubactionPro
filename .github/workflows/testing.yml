@@ -39,11 +39,13 @@ jobs:
     - name: Deploy code
       uses: appleboy/ssh-action@master
       with:
-          host: 162.241.71.29
-          username: root
-          password: Mithu@123
+          host: ${{ secrets.VPS_SERVER_HOST }}
+          username: ${{ secrets.VPS_SERVER_USERNAME }}
+          password: ${{ secrets.VPS_SERVER_PASSWORD }}
           script: |
-            cd /root/demo
+            cd /root
+            mkdir demo
+            cd demo
             git init
             git remote add origin https://github.com/anishkumarsahu/githubactionPro.git  # Replace <repository-url> with the URL of your Git repository
             git pull origin main
