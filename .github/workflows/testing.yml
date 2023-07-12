@@ -43,8 +43,8 @@ jobs:
         username: root
         password: Mithu@123
         REMOTE_DIR: /root
-        protocol: ftp
-        port: 21
+        protocol: ftps
+        port: 22
 
 #    - name: Deploy to VPN Server
 #      uses: Techie-Pi/node-vps-deployment@main
