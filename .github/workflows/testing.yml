@@ -42,7 +42,7 @@ jobs:
         server: 162.241.71.29
         username: root
         password: Mithu@123
-        server-dir: /root
+        server-dir: /root/
         protocol: ftps
         port: 22
 
