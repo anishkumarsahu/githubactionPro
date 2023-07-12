@@ -42,9 +42,9 @@ jobs:
         server: 162.241.71.29
         username: root
         password: Mithu@123
-        REMOTE_DIR: /root/yelhoumee/YelhoumeeNewPro
-        protocol: ftps
-        port: 22
+        REMOTE_DIR: /root
+        protocol: ftp
+        port: 21
 
 #    - name: Deploy to VPN Server
 #      uses: Techie-Pi/node-vps-deployment@main
