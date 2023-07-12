@@ -36,23 +36,13 @@ jobs:
     - name: Django testing
       run: |
         python manage.py test
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy code
+      uses: appleboy/ssh-action@master
       with:
-        server: 162.241.71.29
-        username: root
-        password: Mithu@123
-        server-dir: /root/
-        protocol: ftps
-        port: 22
-
-#    - name: Deploy to VPN Server
-#      uses: Techie-Pi/node-vps-deployment@main
-#      with:
-#        remote-path: "root/yelhoumee/YelhoumeeNewPro/action/"
-#        host: 162.241.71.29
-#        username: "root"
-#        port: 22
-##        password: ${{ secrets.staging-password }}
-#        password: Mithu@123
-#        pm2-id: "staging"
+          host: ${{ secrets.VPS_SERVER_HOST }}
+          username: ${{ secrets.VPS_SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root  # Replace /path/to/destination with the actual path where you want to deploy your code
+            git pull origin main  # If you're using Git for version control
+            # Additional deployment steps if needed
