@@ -13,4 +13,4 @@ class ModelTesting(TestCase):
     def test_post_model(self):
         d = self.blog
         self.assertTrue(isinstance(d, Post))
-        self.assertEqual(str(self.blog), 'Test')
+        self.assertEqual(str(self.blog), 'Test1')
